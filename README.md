@@ -1,0 +1,3 @@
+Su technologijų tobulėjimu ir didėjančiu žmonių gyvenimo tempu atsirado poreikis kurti pažangius sprendimus, leidžiančius užtikrinti naminių gyvūnų gerovę net ir šeimininkui nesant namuose. 
+Vienas iš tokių sprendimų – išmanioji gyvūnų šėrimo ir stebėjimo sistema. Tai technologinis sprendimas, leidžiantis automatizuoti gyvūnų maitinimą, stebėti jų elgseną, sveikatos būklę bei užtikrinti reikiamas priežiūros sąlygas bet kuriuo paros metu. 
+Ši sistema apjungia maisto tiekimo valdymą, gyvūno veiklos stebėjimą bei duomenų kaupimą, sudarydama sąlygas atsakingesnei ir efektyvesnei gyvūno priežiūrai.
