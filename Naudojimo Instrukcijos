@@ -1,0 +1,72 @@
+          Išmaniosios Šeryklos Naudojimo Instrukcija
+
+Ši instrukcija padės jums paleisti ir valdyti automatinę gyvūnų šeryklą per konsolę (terminalą).
+
+          1. Programos Paleidimas
+Norėdami paleisti programą, atidarykite terminalą ir įveskite komandą. Būtina naudoti sudo, kad programa turėtų prieigą prie Raspberry Pi GPIO jungčių.
+
+sudo python3 pilnas.py
+
+          2. Pradinė Konfigūracija
+Paleidus programą, jūsų paprašys nustatyti du parametrus:
+
+Pasirinkti Spalvą:
+
+Pamatysite spalvų sąrašą. Įveskite norimos spalvos pavadinimą (pvz., brown) arba numerį (pvz., 1) ir paspauskite Enter.
+Sistema reaguos tik į gyvūnus, atitinkančius jūsų pasirinktą spalvą.
+Nustatyti Ciklo Laiką:
+
+Įveskite, kas kiek sekundžių sistema gali vėl aktyvuotis po gyvūno aptikimo. Tai apsaugo nuo per dažno šėrimo.
+Pavyzdžiui, įveskite 60 ir paspauskite Enter, kad tarp šėrimų praeitų mažiausiai viena minutė.
+
+          3. Pagrindinis Meniu (Main Menu)
+
+Po konfigūracijos pamatysite pagrindinį meniu:
+
+1. Start Automatic Monitoring (Pradėti Automatinį Stebėjimą):
+
+Svarbiausias režimas. Programa pradeda stebėti aplinką ultragarso jutikliu.
+Aptikus gyvūną, ji nufotografuoja, patikrina spalvą ir, jei spalva atitinka, automatiškai išduoda maistą.
+Norėdami sustabdyti šį režimą ir grįžti į pagrindinį meniu, paspauskite Ctrl + C.
+2. Manual Control Menu (Rankinio Valdymo Meniu):
+
+Atveria papildomą meniu su rankinėmis funkcijomis.
+3. Exit (Išeiti):
+
+Saugiai išjungia programą, atlaisvindama visas GPIO jungtis.
+
+          4. Rankinio Valdymo Meniu (Manual Control Menu)
+Čia galite atlikti veiksmus rankiniu būdu:
+
+1. Dispense Food Now (Išduoti Maistą Dabar):
+
+Šerykla iškart įvykdys vieną maisto išdavimo ciklą.
+2. Live Camera View (Tiesioginė Kameros Peržiūra):
+
+Atidarys kameros peržiūros langą jūsų ekrane. Galėsite matyti, kas vyksta realiu laiku.
+Norėdami uždaryti peržiūrą, tiesiog uždarykite atsidariusį langą.
+3. Test Servo (Testuoti Servo):
+
+Vykdo tą pačią maisto išdavimo seką kaip ir pirma komanda. Patogu greitam testavimui.
+4. Check Distance Sensor (Patikrinti Atstumo Sensorių):
+
+Konsolėje matysite nuolat atnaujinamus atstumo jutiklio rodmenis. Naudinga patikrinti, ar jutiklis veikia teisingai.
+Sustabdymui paspauskite Ctrl + C.
+5. Take Photo (Nufotografuoti):
+
+Padaro vieną nuotrauką ir išsaugo ją captured_images aplanke.
+6. Back to Main Menu (Grįžti į Pagrindinį Meniu):
+
+Grąžina jus į pagrindinį meniu.
+
+          5.SVARBU: Servo Kalibravimas
+Jei šerykla atsidaro per daug/per mažai arba negrįžta į pradinę padėtį, būtina atlikti kalibravimą.
+
+Pagrindiniame meniu pasirinkite 2 (Manual Control Menu), o tada Calibrate Servo (jei toks pasirinkimas yra, arba ieškokite kalibravimo parinkties).
+Pažymėkite pradinę servo padėtį (pvz., užklijuokite lipnią juostelę).
+Kalibravimo meniu naudokite komandas, kad sureguliuotumėte judėjimą:
+test: Paleidžia pilną atidarymo ir uždarymo ciklą. Stebėkite, ar servo grįžta į pradinę padėtį.
+open speed [skaičius] (pvz., open speed 7.0): Nustato atidarymo greitį.
+close speed [skaičius] (pvz., close speed 8.0): Nustato uždarymo greitį.
+time [skaičius] (pvz., time 1.2): Nustato, kiek laiko suksis variklis į kiekvieną pusę.
+Tikslas: Sureguliuoti open speed, close speed ir time taip, kad po test komandos servo grįžtų lygiai į tą pačią vietą, iš kurios pradėjo.
