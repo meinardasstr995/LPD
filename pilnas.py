@@ -31,7 +31,7 @@ import requests   # HTTP client to send data
 # -----------------------------------------------------------------------------
 # NETWORK CONFIGURATION  (update host if needed)
 # -----------------------------------------------------------------------------
-HOST = "<IP_ADDRESS>"                  # address of computer running Node‑RED
+HOST = "192.168.32.142"                  # address of computer running Node‑RED
 URL  = f"http://{HOST}:1880/feeder"
  
 # GPIO Configuration
@@ -378,4 +378,3 @@ if __name__ == "__main__":
     if os.geteuid() != 0:
         print("⚠️ For GPIO access run with sudo: sudo python3 " + sys.argv[0])
     main()
- 
